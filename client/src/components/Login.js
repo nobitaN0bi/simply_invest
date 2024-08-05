@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import '../designs/Login.css'; // assuming you put the CSS in a file named Login.css
+import { Link } from 'react-router-dom';
 const Login = () => {
     const [formData, setFormData] = useState({
         email: '',
@@ -27,18 +28,21 @@ const Login = () => {
     };
 
     return (
-        <div>
+        <div className="wrapper">
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Email:</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+                <div className="input-box">
+                    <input type="email" name="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} required />
                 </div>
-                <div>
-                    <label>Password:</label>
-                    <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+                <div className="input-box">
+                    <input type="password" name="password" placeholder="Enter your password" value={formData.password} onChange={handleChange} required />
                 </div>
-                <button type="submit">Login</button>
+                <div className="input-box button">
+                    <input type="submit" value="Login" />
+                </div>
+                <div className="text">
+                    <h3>Don't have an account?  <Link to="/Register">Register now</Link></h3>
+                </div>
             </form>
         </div>
     );

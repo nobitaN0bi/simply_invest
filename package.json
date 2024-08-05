@@ -8,7 +8,6 @@
     "start-server": "cd server && npm start",
     "start-client": "cd client && npm start"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/satish-rathod/simply-invest.git"
@@ -22,5 +21,9 @@
   "homepage": "https://github.com/satish-rathod/simply-invest#readme",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2"
   }
 }
